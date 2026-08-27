@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { person } from "@/lib/portfolio-data";
 import { ThemeToggle } from "@/components/site/ThemeToggle";
-import markAsset from "@/assets/technology.gif.asset.json";
-
 const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
@@ -40,7 +38,7 @@ export function Nav() {
         <Link to="/" className="group flex items-center gap-2.5" onClick={() => setOpen(false)}>
           <span className="relative grid size-9 place-items-center overflow-hidden rounded-xl border border-border bg-card shadow-soft transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:scale-105">
             <img
-              src={markAsset.url}
+              src="/technology.gif"
               alt=""
               aria-hidden
               className="size-full object-cover"

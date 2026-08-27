@@ -4,7 +4,6 @@ import { Reveal, CountUp } from "@/components/site/Reveal";
 import { ToolOrbit } from "@/components/site/ToolOrbit";
 import { SkillIcon } from "@/components/site/SkillIcon";
 
-import portraitAsset from "@/assets/abid-portrait.png.asset.json";
 import {
   person,
   pillars,
@@ -114,7 +113,7 @@ function Index() {
                 className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-card/90 to-transparent"
               />
               <img
-                src={portraitAsset.url}
+                src="/abid-portrait.png"
                 alt="Portrait of Al Hassan Abid"
                 width={1024}
                 height={1536}
