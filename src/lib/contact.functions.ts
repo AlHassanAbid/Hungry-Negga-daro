@@ -9,11 +9,7 @@ const contactSchema = z.object({
 });
 
 const escapeHtml = (value: string) =>
-  value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
+  value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
 export const sendContactMessage = createServerFn({ method: "POST" })
   .inputValidator((data: unknown) => contactSchema.parse(data))

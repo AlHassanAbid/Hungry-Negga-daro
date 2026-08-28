@@ -53,7 +53,10 @@ function Experience() {
               <p className="mt-1 text-sm text-muted-foreground">{role.location}</p>
               <ul className="mt-5 space-y-3">
                 {role.points.map((point) => (
-                  <li key={point} className="flex gap-3 text-sm leading-relaxed text-muted-foreground">
+                  <li
+                    key={point}
+                    className="flex gap-3 text-sm leading-relaxed text-muted-foreground"
+                  >
                     <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary/70" />
                     {point}
                   </li>

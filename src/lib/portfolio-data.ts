@@ -9,7 +9,6 @@ export const person = {
     "A technically minded professional combining software development, data analysis, digital marketing and visual design — with a focus on usability, efficiency and business outcomes.",
 };
 
-
 export const pillars = [
   {
     key: "CODE",
@@ -93,7 +92,6 @@ export const skillGroups: {
   },
 ];
 
-
 export const experience = [
   {
     company: "MADYS",
@@ -163,8 +161,7 @@ export const achievements = [
     value: 50,
     suffix: "%",
     label: "reduction in manual work",
-    detail:
-      "The Next-Gen Tech Innovation Award for an outstanding task using Manus AI — MADYS.",
+    detail: "The Next-Gen Tech Innovation Award for an outstanding task using Manus AI — MADYS.",
   },
   {
     value: 200,

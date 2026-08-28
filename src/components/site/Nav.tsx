@@ -46,9 +46,7 @@ export function Nav() {
               height={36}
             />
           </span>
-          <span className="font-display text-sm font-semibold tracking-tight">
-            {person.name}
-          </span>
+          <span className="font-display text-sm font-semibold tracking-tight">{person.name}</span>
         </Link>
 
         <ul className="hidden items-center gap-1 md:flex">
@@ -84,7 +82,6 @@ export function Nav() {
             {open ? <X className="size-4" /> : <Menu className="size-4" />}
           </button>
         </div>
-
       </nav>
 
       {open && (

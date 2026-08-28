@@ -62,7 +62,10 @@ export function CountUp({
 
   useEffect(() => {
     if (!visible) return;
-    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
       setDisplay(value);
       return;
     }
