@@ -7,7 +7,6 @@ import { Reveal } from "@/components/site/Reveal";
 import { person } from "@/lib/portfolio-data";
 import { sendContactMessage } from "@/lib/contact.functions";
 
-
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
@@ -63,7 +62,6 @@ function Contact() {
         description: `Sending directly to ${person.email}.`,
       });
     } finally {
-
       setPending(false);
     }
   }

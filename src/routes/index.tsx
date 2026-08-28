@@ -1,5 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Code2, Database, Palette, Megaphone, GraduationCap, Award, Building2 } from "lucide-react";
+import {
+  ArrowRight,
+  Code2,
+  Database,
+  Palette,
+  Megaphone,
+  GraduationCap,
+  Award,
+  Building2,
+} from "lucide-react";
 import { Reveal, CountUp } from "@/components/site/Reveal";
 import { ToolOrbit } from "@/components/site/ToolOrbit";
 import { SkillIcon } from "@/components/site/SkillIcon";
@@ -129,7 +138,6 @@ function Index() {
             <ToolOrbit />
           </Reveal>
         </div>
-
       </section>
 
       {/* Education & credibility */}
@@ -163,7 +171,6 @@ function Index() {
         </div>
       </section>
 
-
       {/* Code + Data + Creative */}
       <section className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
         <Reveal>
@@ -185,7 +192,9 @@ function Index() {
                     {pillar.key}
                   </p>
                   <h3 className="mt-2 font-display text-lg font-semibold">{pillar.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{pillar.body}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {pillar.body}
+                  </p>
                 </article>
               </Reveal>
             );
@@ -274,7 +283,6 @@ function Index() {
             See frameworks, databases & tools <ArrowRight className="size-4" />
           </Link>
         </Reveal>
-
       </section>
 
       {/* Experience preview */}
@@ -288,7 +296,12 @@ function Index() {
           </Reveal>
           <ol className="relative mt-12 border-l border-border pl-8">
             {experience.map((role, i) => (
-              <Reveal key={role.company} delay={i * 120} as="li" className="relative pb-10 last:pb-0">
+              <Reveal
+                key={role.company}
+                delay={i * 120}
+                as="li"
+                className="relative pb-10 last:pb-0"
+              >
                 <span className="absolute -left-[41px] top-1.5 grid size-4 place-items-center rounded-full border-2 border-primary bg-background">
                   <span className="size-1.5 rounded-full bg-primary" />
                 </span>

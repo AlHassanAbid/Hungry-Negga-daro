@@ -9,7 +9,6 @@ const socialIcons = {
   WhatsApp: MessageCircle,
 } as const;
 
-
 export function Footer() {
   return (
     <footer className="mt-32 border-t border-border bg-surface/60">
@@ -68,7 +67,6 @@ export function Footer() {
             })}
           </div>
         </div>
-
 
         <div>
           <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-primary">
