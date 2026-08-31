@@ -1,25 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/site/Reveal";
 import { projects } from "@/lib/portfolio-data";
+import { seoMeta, seoLinks } from "@/lib/seo";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
-    meta: [
-      { title: "Projects | Fire Fighter Robot Car & Solar Sync" },
-      {
-        name: "description",
-        content:
-          "Detailed case studies: an Arduino-based Fire Fighter Robot Car and Solar Sync, an SQL analysis of solar performance and grid power sharing.",
-      },
-      { property: "og:title", content: "Projects | Al Hassan Abid" },
-      {
-        property: "og:description",
-        content:
-          "Case studies covering overview, technologies, problem, solution and outcome for each project.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
+    meta: seoMeta({
+      title: "Projects | Al Hassan Abid — Fire Fighter Robot Car & Solar Sync",
+      description:
+        "Case studies by Al Hassan Abid: an Arduino-based Fire Fighter Robot Car and Solar Sync, an SQL analysis of solar performance and grid power sharing.",
+      path: "/projects",
+    }),
+    links: seoLinks("/projects"),
   }),
   component: Projects,
 });

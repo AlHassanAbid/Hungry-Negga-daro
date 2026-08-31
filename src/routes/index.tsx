@@ -3,6 +3,7 @@ import { ArrowRight, Code2, Database, Palette, Megaphone, GraduationCap, Award, 
 import { Reveal, CountUp } from "@/components/site/Reveal";
 import { ToolOrbit } from "@/components/site/ToolOrbit";
 import { SkillIcon } from "@/components/site/SkillIcon";
+import { seoMeta, seoLinks } from "@/lib/seo";
 
 import {
   person,
@@ -16,22 +17,13 @@ import {
 
 export const Route = createFileRoute("/")({
   head: () => ({
-    meta: [
-      { title: "Web Developer & Software Engineer | Portfolio" },
-      {
-        name: "description",
-        content:
-          "Explore a professional portfolio featuring web development, software engineering, data analysis, social media marketing, digital advertising, and technical projects.",
-      },
-      { property: "og:title", content: "Web Developer & Software Engineer | Portfolio" },
-      {
-        property: "og:description",
-        content:
-          "Portfolio of Al Hassan Abid — code, data, creative and marketing work with measurable outcomes.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
+    meta: seoMeta({
+      title: "Al Hassan Abid — Web Developer & Software Engineer",
+      description:
+        "Portfolio of Al Hassan Abid: web development, software engineering, data analysis, UI/UX design and digital marketing with measurable outcomes. Based in Khulna, Bangladesh.",
+      path: "/",
+    }),
+    links: seoLinks("/"),
   }),
   component: Index,
 });

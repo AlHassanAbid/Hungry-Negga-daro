@@ -2,25 +2,18 @@ import { createFileRoute } from "@tanstack/react-router";
 import { GraduationCap, BadgeCheck, Sparkles } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { person, education, certifications, pillars } from "@/lib/portfolio-data";
+import { seoMeta, seoLinks } from "@/lib/seo";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
-    meta: [
-      { title: "About | Al Hassan Abid — Developer & Engineer" },
-      {
-        name: "description",
-        content:
-          "The professional story behind the portfolio: diploma engineering in computer science, certifications, and strengths across code, data, design and marketing.",
-      },
-      { property: "og:title", content: "About | Al Hassan Abid" },
-      {
-        property: "og:description",
-        content:
-          "Education, certifications and professional strengths across development, data analysis, UI/UX and digital marketing.",
-      },
-      { property: "og:type", content: "profile" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
+    meta: seoMeta({
+      title: "About | Al Hassan Abid — Web Developer & Software Engineer",
+      description:
+        "The professional story behind the portfolio: diploma engineering in computer science, certifications, and strengths across code, data, design and marketing.",
+      path: "/about",
+      ogType: "profile",
+    }),
+    links: seoLinks("/about"),
   }),
   component: About,
 });

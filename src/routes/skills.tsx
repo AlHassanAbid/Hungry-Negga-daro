@@ -2,25 +2,17 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/site/Reveal";
 import { SkillIcon } from "@/components/site/SkillIcon";
 import { skillGroups } from "@/lib/portfolio-data";
+import { seoMeta, seoLinks } from "@/lib/seo";
 
 export const Route = createFileRoute("/skills")({
   head: () => ({
-    meta: [
-      { title: "Technical Skills | Languages, Frameworks & Tools" },
-      {
-        name: "description",
-        content:
-          "Technical skills of Al Hassan Abid: HTML/CSS, JavaScript, PHP, Java, Python, React.js, Node.js, Next.js, Firebase, MongoDB, Mongoose, Git and GitHub with proficiency levels.",
-      },
-      { property: "og:title", content: "Technical Skills | Al Hassan Abid" },
-      {
-        property: "og:description",
-        content:
-          "Programming languages, libraries & frameworks, databases and tools with proficiency levels.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
+    meta: seoMeta({
+      title: "Technical Skills | Al Hassan Abid — Languages, Frameworks & Tools",
+      description:
+        "Technical skills of Al Hassan Abid: HTML/CSS, JavaScript, PHP, Java, Python, React.js, Node.js, Next.js, Firebase, MongoDB, Mongoose, Git and GitHub with proficiency levels.",
+      path: "/skills",
+    }),
+    links: seoLinks("/skills"),
   }),
   component: Skills,
 });

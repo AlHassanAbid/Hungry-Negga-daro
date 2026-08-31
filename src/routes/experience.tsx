@@ -1,25 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/site/Reveal";
 import { experience } from "@/lib/portfolio-data";
+import { seoMeta, seoLinks } from "@/lib/seo";
 
 export const Route = createFileRoute("/experience")({
   head: () => ({
-    meta: [
-      { title: "Experience | MADYS & LSKIT — Al Hassan Abid" },
-      {
-        name: "description",
-        content:
-          "Professional timeline: Founder & Software Engineer at MADYS and Data Entry Specialist at LSKIT, with measurable outcomes in forecasting, dashboards and data accuracy.",
-      },
-      { property: "og:title", content: "Experience | Al Hassan Abid" },
-      {
-        property: "og:description",
-        content:
-          "An interactive timeline of roles at MADYS and LSKIT with the measurable results delivered in each.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
+    meta: seoMeta({
+      title: "Experience | Al Hassan Abid — MADYS & LSKIT",
+      description:
+        "Professional timeline of Al Hassan Abid: Founder & Software Engineer at MADYS and Data Entry Specialist at LSKIT, with measurable outcomes in forecasting, dashboards and data accuracy.",
+      path: "/experience",
+    }),
+    links: seoLinks("/experience"),
   }),
   component: Experience,
 });

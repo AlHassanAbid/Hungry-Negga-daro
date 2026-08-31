@@ -6,25 +6,18 @@ import { useServerFn } from "@tanstack/react-start";
 import { Reveal } from "@/components/site/Reveal";
 import { person } from "@/lib/portfolio-data";
 import { sendContactMessage } from "@/lib/contact.functions";
+import { seoMeta, seoLinks } from "@/lib/seo";
 
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
-    meta: [
-      { title: "Contact | Work with Al Hassan Abid" },
-      {
-        name: "description",
-        content:
-          "Get in touch about web development, software engineering, data analysis or digital marketing work. Send a short message through the contact form.",
-      },
-      { property: "og:title", content: "Contact | Al Hassan Abid" },
-      {
-        property: "og:description",
-        content: "A short, professional invitation to connect about development and data work.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
+    meta: seoMeta({
+      title: "Contact | Work with Al Hassan Abid",
+      description:
+        "Get in touch with Al Hassan Abid about web development, software engineering, data analysis or digital marketing work. Send a short message through the contact form.",
+      path: "/contact",
+    }),
+    links: seoLinks("/contact"),
   }),
   component: Contact,
 });
