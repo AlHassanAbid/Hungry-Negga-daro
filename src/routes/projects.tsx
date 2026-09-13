@@ -40,22 +40,9 @@ function Projects() {
                 />
                 <div className="relative flex flex-wrap items-baseline justify-between gap-3">
                   <h2 className="font-display text-3xl font-semibold">{project.name}</h2>
-                  <div className="flex flex-wrap items-center gap-2">
-                    {project.link && (
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-xs font-medium text-primary-foreground shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-lift"
-                      >
-                        Visit Website
-                        <ArrowUpRight className="size-3.5" />
-                      </a>
-                    )}
-                    <span className="rounded-full border border-border bg-background px-3 py-1 text-xs text-muted-foreground">
-                      {project.period}
-                    </span>
-                  </div>
+                  <span className="rounded-full border border-border bg-background px-3 py-1 text-xs text-muted-foreground">
+                    {project.period}
+                  </span>
                 </div>
                 <p className="relative mt-3 max-w-2xl text-sm text-muted-foreground">
                   {project.tagline}
@@ -83,6 +70,17 @@ function Projects() {
                       </li>
                     ))}
                   </ul>
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-lift"
+                    >
+                      Visit Website
+                      <ArrowUpRight className="size-4" />
+                    </a>
+                  )}
                 </div>
               </div>
             </article>
