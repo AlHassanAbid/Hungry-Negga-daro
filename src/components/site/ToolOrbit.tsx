@@ -54,12 +54,6 @@ const tools: Tool[] = [
     delay: 1050,
   },
   { name: "ChatGPT", icon: <OpenAI />, className: "-right-5 bottom-32 sm:-right-10", delay: 1750 },
-  {
-    name: "Manus AI",
-    icon: <span className="font-display text-[0.7rem] font-bold">Ma</span>,
-    className: "-left-2 -bottom-5 sm:-left-6",
-    delay: 1200,
-  },
 ];
 
 export function ToolOrbit() {
