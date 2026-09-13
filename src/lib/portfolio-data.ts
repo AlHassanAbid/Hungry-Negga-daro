@@ -146,6 +146,7 @@ export const projects = [
     name: "Solar Sync",
     period: "May 2026 – Jun 2026",
     tagline: "SQL-driven analysis of solar performance and grid power sharing.",
+    link: "https://solar-sync-lqrd8qzep-voss6.vercel.app",
     overview:
       "Analyzed consumer behavior and electricity usage patterns using complex SQL queries to optimize electricity bills and power usage.",
     technologies: ["SQL", "Data Analysis", "Dashboards"],

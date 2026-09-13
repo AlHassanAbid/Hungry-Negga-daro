@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { projects } from "@/lib/portfolio-data";
 import { seoMeta, seoLinks } from "@/lib/seo";
@@ -39,9 +40,22 @@ function Projects() {
                 />
                 <div className="relative flex flex-wrap items-baseline justify-between gap-3">
                   <h2 className="font-display text-3xl font-semibold">{project.name}</h2>
-                  <span className="rounded-full border border-border bg-background px-3 py-1 text-xs text-muted-foreground">
-                    {project.period}
-                  </span>
+                  <div className="flex flex-wrap items-center gap-2">
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-xs font-medium text-primary-foreground shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-lift"
+                      >
+                        Visit Website
+                        <ArrowUpRight className="size-3.5" />
+                      </a>
+                    )}
+                    <span className="rounded-full border border-border bg-background px-3 py-1 text-xs text-muted-foreground">
+                      {project.period}
+                    </span>
+                  </div>
                 </div>
                 <p className="relative mt-3 max-w-2xl text-sm text-muted-foreground">
                   {project.tagline}
