@@ -18,7 +18,6 @@ import {
   SITE_URL,
   SITE_NAME,
   OG_IMAGE_ABS,
-  OG_IMAGE,
 } from "@/lib/site";
 import { person, socials, education, certifications } from "@/lib/portfolio-data";
 
@@ -135,7 +134,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap",
       },
       { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
-      { rel: "apple-touch-icon", href: OG_IMAGE },
+      { rel: "icon", href: "/favicon.ico", sizes: "32x32" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
       { rel: "mask-icon", href: "/favicon.svg", color: "#000000" },
     ],
   }),

@@ -23,7 +23,16 @@ export const Route = createFileRoute("/")({
         "Portfolio of Al Hassan Abid: web development, software engineering, data analysis, UI/UX design and digital marketing with measurable outcomes. Based in Khulna, Bangladesh.",
       path: "/",
     }),
-    links: seoLinks("/"),
+    links: [
+      ...seoLinks("/"),
+      {
+        rel: "preload",
+        href: "/abid-portrait.webp",
+        as: "image",
+        type: "image/webp",
+        fetchPriority: "high",
+      },
+    ],
   }),
   component: Index,
 });
@@ -105,10 +114,12 @@ function Index() {
                 className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-card/90 to-transparent"
               />
               <img
-                src="/abid-portrait.png"
+                src="/abid-portrait.webp"
                 alt="Portrait of Al Hassan Abid"
-                width={1024}
-                height={1536}
+                width={720}
+                height={960}
+                fetchPriority="high"
+                decoding="async"
                 className="aspect-[3/4] w-full object-cover object-top transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
               />
               <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-border/70 bg-background/80 px-4 py-3 backdrop-blur-md">
