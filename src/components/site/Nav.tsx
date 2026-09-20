@@ -38,7 +38,7 @@ export function Nav() {
         <Link to="/" className="group flex items-center gap-2.5" onClick={() => setOpen(false)}>
           <span className="relative grid size-9 place-items-center overflow-hidden rounded-xl border border-border bg-card shadow-soft transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:scale-105">
             <img
-              src="/technology.webp"
+              src="/technology.gif"
               alt=""
               aria-hidden
               className="size-full object-cover"
